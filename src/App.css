@@ -3,6 +3,11 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+main{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 .navbar {
   border-bottom: 1px solid #ccc;
   padding: 1em;
@@ -55,7 +60,7 @@ summary {
 }
 
 .details__content {
-  padding: 0 1em 1em 1em;
+  padding: 1em 1em 1em 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;

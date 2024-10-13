@@ -11,6 +11,11 @@ import HexColor from "./HexColor";
 import TicketNumber from "./TicketNumber";
 import Address from "./Address";
 import DoubleClickCounter from "./DoubleClickCounter";
+import Dashboard from "./Dashboard";
+import AdminDashboard from "./AdminDashboard";
+import Counter from "./Counter";
+import Loader from "./Loader";
+
 import "./App.css";
 
 function App() {
@@ -36,19 +41,12 @@ function App() {
   ];
 
   return (
-    <main
-      style={{
-        marginLeft: "5%",
-        marginRight: "5%",
-        marginTop: "2%",
-        marginBotton: "2%",
-      }}
-    >
+    <main>
       <Menu />
 
       <details>
         <summary>5 - Making React interactive with states</summary>
-        <div class="details__content">
+        <div className="details__content">
           <Accordion />
           <TodoApplication initialList={items} />
           <Dropdown />
@@ -58,14 +56,14 @@ function App() {
       <details>
         <summary>6 - Effects and the React component life cycle</summary>
 
-        <div class="details__content">
+        <div className="details__content">
           <button style={style} onClick={() => setShowWatch((b) => !b)}>
             Toggle watch
           </button>
-          {showWatch && <Stopwatch />}         
+          {showWatch && <Stopwatch />}
         </div>
 
-        <div class="details__content">
+        <div className="details__content">
           <ul className="menu">
             <li>
               <button onClick={() => setDefaultEmail(EMAIL1)}>
@@ -88,25 +86,43 @@ function App() {
           </ul>
         </div>
 
-        <div class="details__content">
+        <div className="details__content">
           <Countdown from={10} />
         </div>
       </details>
 
       <details>
         <summary>7 - Hooks to fuel your web applications</summary>
-        <div class="details__content">
+        <div className="details__content">
           <DoubleClickCounter />
         </div>
       </details>
 
       <details>
+        <summary>8 - Handling events in React</summary>
+        <div className="details__content"></div>
+      </details>
+
+      <details>
         <summary>9 - Working with forms in React</summary>
-        <div class="details__content">
+        <div className="details__content">
           <Sum />
           <HexColor />
           <TicketNumber />
           <Address />
+        </div>
+      </details>
+
+      <details>
+        <summary>10 - Advanced React hooks for scaling</summary>
+        <div className="details__content">
+          <Dashboard name="Alice" />
+          <AdminDashboard />
+          <Counter />
+          
+        </div>
+        <div className="details__content">
+        <Loader />
         </div>
       </details>
     </main>

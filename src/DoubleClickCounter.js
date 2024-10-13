@@ -15,6 +15,7 @@ function DoubleClickCounter() {
 
   return (
     <>
+    <h4>Double Click Counter</h4>
       <p>Counter: {counter}</p>
       <button onClick={onClick}>Increment</button>
     </>

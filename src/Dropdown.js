@@ -8,7 +8,7 @@ function Dropdown() {
       .then((data) => data.results)
       .then((characters) => characters.map(({ name }) => name))
       .then((names) => setOptions(names));
-  });
+  },[]);
 
   const Style = {
     border: "1px solid dimgray",
